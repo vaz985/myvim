@@ -1,33 +1,60 @@
+"""""""Pathogen""""""""""
 execute pathogen#infect()
-filetype plugin indent on
-
-filetype on
+"""""""""""""""""""""""""
 syntax on
-set guifont=Monospace\ 14
+
+"""""""Synthastic""""""""
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+"""""""""""""""""""""""""
 
 set number
-set linebreak
-set showbreak=+++
-set textwidth=100
-set showmatch
-set visualbell
+set softtabstop=2 tabstop=2 shiftwidth=2 expandtab cindent
+set number mouse=a ruler
 
-set hlsearch
-set smartcase
-set ignorecase
+set splitbelow
+set splitright
+set shiftround
+
+" Unset clipboard so I can yank lines to other programs.
+set clipboard=unnamedplus
+
+" Telling vim to not bother redrawing the screen all the time.
+set lazyredraw
+
+" Show matching parenthesis, brackets and etc.
+set showmatch
+
+" Incremental search.
 set incsearch
 
-set autoindent
-set shiftwidth=4
-set expandtab
-set smarttab
-set smartindent
-set softtabstop=4
+" Ignore Case when searching.
+set ignorecase
 
-set ruler
+" Highlight search terms.
+set hlsearch
 
-set undolevels=1000
-set backspace=indent,eol,start
+" Dont Beep.
+set visualbell
+set noerrorbells
+
+" Don't highlight the current line.
+set nocursorline
+
+" 
+set wrap
+
+"
+set t_Co=256
+
+"
+set scrolloff=1
 
 colorscheme madeofcode
 
